@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+        }
+
+        .container {
+            display: flex;
+            height: 80vh;
+            width: 100%;
+            background-color: wheat;
+            align-items: end;
+            justify-content: center;
+            position: relative;
+        }
+
+        .box1 {
+            background-color: red;
+            z-index: 1;
+            position: absolute;
+            transition: all 0.3s;
+        }
+
+        .box2 {
+            background-color: rgb(0, 140, 255);
+            transition: all 0.3s;
+            position: absolute;
+            transform: translateX(400px);
+            display: none;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="buttons">
+        <a href="#"><button onclick="signin()">signin</button></a>
+        <a href="#"><button onclick="signup()">signup</button></a>
+    </div>
+    <div class="container">
+        <div class="box box1" id="box1">signin</div>
+        <div class="box box2" id="box2">signup</div>
+    </div>
+    <script>
+        function signin() {
+            let box1 = document.getElementById('box1');
+            let box2 = document.getElementById('box2');
+
+            box1.style = "opacity:0; transform:translatex(300px);"
+            box2.style = "z-index: 1; opacity:1; transform: translateX(0);"
+        }
+        function signup() {
+            let box1 = document.getElementById('box1');
+            let box2 = document.getElementById('box2');
+
+            register.style = "opacity:0; transform:translatex(300px);"
+            login.style = "z-index: 1; opacity:1; transform: translateX(0);"
+        }
+    </script>
+</body>
+
+</html>

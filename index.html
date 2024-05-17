@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic World</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'
+        integrity='sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=='
+        crossorigin='anonymous' referrerpolicy='no-referrer' />
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="assets/CSS/responsive.css">
+    <link rel="shortcut icon" href="assets/IMG/favicon3.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-sharp fa-solid fa-arrow-up"></i></button>
+    <a href="https://api.whatsapp.com/send?phone=6353670149"
+        class="float d-flex justify-content-center align-items-center text-center " target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <!-- header section -->
+    <header>
+        <nav class="navbar py-sm-3 py-3 px-md-3 px-sm-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/IMG/Comico_Logo-removebg-preview.png" alt="Logo"
+                        class="d-inline-block align-text-top">
+                </a>
+
+                <div class="icon_div">
+                    <span class="icon">
+                        <a href="#">
+                            <i class="fa-solid fa-bag-shopping text-white"></i>
+                        </a>
+                    </span>
+                    <span class="icon">
+                        <a href="signin.html">
+                            <i class="fa-regular fa-user text-white mx-sm-4 mx-4"></i>
+                        </a>
+                    </span>
+                    <span class="icon togglebtn z-1 " onclick="toggleSidebar()" id="btnopen">
+                        <!-- <i class="fa-solid fa-bars"></i> -->
+                        <i class="fa-solid fa-list-ul text-white opacity-100"></i>
+                    </span>
+
+                </div>
+                <div class="sidebar position-fixed" id="sidebar">
+                    <span class="close-btn p-0" onclick="toggleSidebar()"><i
+                            class="fa-solid fa-xmark text-white z-1"></i></span>
+                    <ul class="navbar-nav flex-column p-0">
+                        <li class="nav-item position-relative "><a class="nav-link position-relative fw-bold mb-2"
+                                href="comics.html">Comics</a></li>
+                        <li class="nav-item position-relative "><a class="nav-link position-relative fw-bold mb-2"
+                                href="manga.html">Manga</a></li>
+                        <li class="nav-item position-relative "><a class="nav-link position-relative fw-bold mb-2"
+                                href="novels.html">Novels</a></li>
+                        <li class="nav-item position-relative "><a class="nav-link position-relative fw-bold mb-2"
+                                href="posters.html">Posters</a></li>
+                        <li class="nav-item position-relative "><a class="nav-link position-relative fw-bold mb-2"
+                                href="actionfigure.html">Action Figures</a></li>
+                        <li class="nav-item position-relative "><a class="nav-link position-relative fw-bold mb-2"
+                                href="toys.html">Lego Toys</a></li>
+                    </ul>
+                    <ul class="another_list navbar-nav">
+                        <li class="nav-item"><a class="nav-link position-relative fw-bold" href="signin.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!-- end header section -->
+
+    <!-- hero section -->
+    <!-- <section class="hero d-flex justify-content-center align-items-center position-relative ">
+        <div classz="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="content">
+                        <h1 class="text-left">Transform into a hero of your own story – explore our comic book galaxy!
+                        </h1>
+                        <div class="search-bar position-relative ">
+                            <input type="text" class="search-field w-100 border-0" placeholder="Search Here...">
+                            <i
+                                class="fa-solid fa-magnifying-glass position-absolute d-flex justify-content-center align-items-center "></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- end hero section -->
+
+    <!-- Swiper -->
+    <!-- <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="assets/IMG/final slider img/slide-1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/final slider img/slide-2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/final slider img/slide-3.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/final slider img/slide-4.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/final slider img/slide-5.jpg" alt="">
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div> -->
+
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="assets/IMG/slider banner/slide 1-01.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="assets/IMG/slider banner/slide 2-01.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="assets/IMG/slider banner/slide 3-01.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="assets/IMG/slider banner/slide 4-01.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="assets/IMG/slider banner/slide 5-01.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon d-md-block d-none " aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon d-md-block d-none " aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- studio section -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide d-flex justify-content-center align-items-center text-center ">
+                <img src="assets/IMG/studio/Lego.jpg" alt="" class="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/Banpresto.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/DC.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/funko.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/Marvel.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/hasbro.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/Iron_Studios_370731cb-a5df-4423-a3b5-f6de123a5fcc.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/Hot_Toys.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/McFarlane_Toys.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/MEZCO.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/Prime1_Studios.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/Sideshow.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/Storm_Collectibles.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/Super7.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/Tsume.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/IMG/studio/XM_Studios.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- end studio section -->
+
+    <!-- Comic Section -->
+    <section class="main-products home-product my-5">
+        <div class="container">
+            <h2 class="text-center mb-5">FEATURED COMICS</h2>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-3 col-6">
+                    <a href="comic-detail.html">
+                        <div class="card rounded-0 border-0 ">
+                            <img src="assets/IMG/Comics/spiderversespiderzero-min.jpg" alt="">
+                            <div class="card-body text-start ">
+                                <h5 class="card-title">Spider-verse Spider-zero</h5>
+                                <p class="card-text">MARVEL COMICS</p>
+                                <span class="price">&#8377; 999.00</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="comic-detail.html">
+                        <div class="card rounded-0 border-0 ">
+                            <img src="assets/IMG/Comics/darthvader1-min.jpg" alt="">
+                            <div class="card-body text-start ">
+                                <h5 class="card-title">Darth Vedar #1</h5>
+                                <p class="card-text">MARVEL COMICS</p>
+                                <span class="price">&#8377; 999.00</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6 mt-lg-0 mt-md-0 mt-4">
+                    <a href="comic-detail.html">
+                        <div class="card rounded-0 border-0 ">
+                            <img src="assets/IMG/Comics/secretwars3-min.jpg" alt="">
+                            <div class="card-body text-start ">
+                                <h5 class="card-title">Secret Wars #3</h5>
+                                <p class="card-text">MARVEL COMICS</p>
+                                <span class="price">&#8377; 999.00</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6 mt-lg-0 mt-md-0 mt-4">
+                    <a href="comic-detail.html">
+                        <div class="card rounded-0 border-0 ">
+                            <img src="assets/IMG/Comics/supermanlastsunofkrypton-min.jpg" alt="">
+                            <div class="card-body text-start ">
+                                <h5 class="card-title">Superman Last Son of Krypton</h5>
+                                <p class="card-text">DC COMICS</p>
+                                <span class="price">&#8377; 999.00</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="btn-div mt-4 text-center">
+                    <button class="explorebtn" onclick="location.href='comics.html'">Explore More Comics</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- novel section -->
+    <section class=" main-products home-product my-5">
+        <div class="container">
+            <h2 class="text-center mb-5">FEATURED NOVELS</h2>
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <a href="comic-detail.html">
+                        <div class="card rounded-0 border-0 ">
+                            <img src="assets/IMG/Novels/dune-min.jpg" alt="">
+                            <div class="card-body text-start ">
+                                <h5 class="card-title">Dune Book 1</h5>
+                                <p class="card-text">FRANK HERBERT</p>
+                                <span class="price">&#8377; 999.00</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="comic-detail.html">
+                        <div class="card rounded-0 border-0 ">
+                            <img src="assets/IMG/Novels/harrypotterazakban-min.jpg" alt="">
+                            <div class="card-body text-start ">
+                                <h5 class="card-title">Harry Potter and The Prisoner of Azkaban</h5>
+                                <p class="card-text">J.K. ROWLING</p>
+                                <span class="price">&#8377; 999.00</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6 mt-lg-0 mt-md-0 mt-4">
+                    <a href="comic-detail.html">
+                        <div class="card rounded-0 border-0 ">
+                            <img src="assets/IMG/Novels/gameofthrones2-min.jpg" alt="">
+                            <div class="card-body text-start ">
+                                <h5 class="card-title">Game of Thrones Book 2</h5>
+                                <p class="card-text">GEORGE R.R. MARTIN</p>
+                                <span class="price">&#8377; 999.00</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6 mt-lg-0 mt-md-0 mt-4">
+                    <a href="comic-detail.html">
+                        <div class="card rounded-0 border-0 ">
+                            <img src="assets/IMG/Novels/dancewithdrangons-min.jpg" alt="">
+                            <div class="card-body text-start ">
+                                <h5 class="card-title">Dance With Dragons</h5>
+                                <p class="card-text">GEORGE R.R. MARTIN</p>
+                                <span class="price">&#8377; 999.00</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="btn-div mt-4 text-center">
+                    <button class="explorebtn" onclick="location.href='novels.html'">Explore More
+                        Novels</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end novel section -->
+
+    <!-- feature section -->
+    <section class="feature">
+        <div class="container">
+            <div class="row d-flex justify-content-lg-center justify-content-md-center ">
+                <div class="col-lg-3 col-md-5 col-sm-6 col-12">
+                    <div class="card text-center border-0  rounded-0 ">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                        <div class="card-body lower-part">
+                            <h5 class="card-title">Free shipping</h5>
+                            <p class="card-text">We offer free shipping across the country.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-5 col-sm-6 col-12 mt-sm-0 mt-4">
+                    <div class="card text-center border-0  rounded-0 ">
+                        <i class="fa-solid fa-headphones"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Customer service</h5>
+                            <p class="card-text">Connect us over E-mail or Phone or WhatsApp.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-5 col-sm-6 col-12 mt-lg-0 mt-md-4 mt-sm-4 mt-4">
+                    <div class="card text-center border-0  rounded-0 ">
+                        <i class="fa-solid fa-award"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Certified</h5>
+                            <p class="card-text">100% certified and premium products.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-5 col-sm-6 col-12 mt-lg-0 mt-md-4 mt-sm-4 mt-4">
+                    <div class="card text-center border-0  rounded-0 ">
+                        <i class="fa-solid fa-lock"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Secure payment</h5>
+                            <p class="card-text">with India's popular & trusted payment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end feature section -->
+
+    <!-- why us section -->
+    <section class="whyus my-4">
+        <div class="container px-lg-0 px-sm-5 px-4">
+            <div class="row d-flex justify-content-around">
+                <div class="col-lg-5 col-md-12 col-10 p-0 position-relative mb-md-5">
+                    <img src="assets/IMG/banner_2.jpg" alt="">
+                    <div class="corner-bottom position-absolute "></div>
+                    <div class="corner-top position-absolute "></div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-12 mt-md-0 mt-5">
+                    <div class="content ">
+                        <h1 class="text-black ">Why Choose Us?</h1>
+                        <p class="text-black">Choose us for your comic book needs because we offer a diverse selection
+                            of comics, novels,
+                            manga, posters, and more. With our vast inventory and user-friendly website, finding your
+                            favorite titles is easy. Plus, enjoy fast shipping and exceptional customer service.
+                            Discover your next adventure with us today!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end why us section -->
+
+    <!-- FAQ section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="row p-md-5 bg-black ">
+                <div class="col-md-6 col-12 p-lg-0 p-md-0 p-4">
+                    <div class="faq-heading text-white ">
+                        <h1 class="mb-3">FAQ</h1>
+                        <p>We are available Monday to Friday 11 am - 8 pm.</P>
+                        <span>Feel free to contact us with any
+                            type of inquiry
+                            and will get back to you as soon as possible</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-md-0 mt-4 text-white faq-ques">
+                    <div class="faq">
+                        <div class="question d-flex justify-content-between align-items-center ">
+                            <span>How long will it take to get my orders?</span>
+                            <i class="fa-solid fa-angle-down d-flex justify-content-center align-items-center"></i>
+                        </div>
+                        <div class="answer mt-3">
+                            <p class="mt-2">It depends on where you are. Orders processed here will take 5-7 business
+                                days to
+                                arrive.
+                                Overseas deliveries can take anywhere from 7-16 days. Delivery details will be
+                                provided
+                                in your confirmation email.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq">
+                        <div class="question  d-flex justify-content-between align-items-center">
+                            <span>How much does shipping cost?</span>
+                            <i class="fa-solid fa-angle-down d-flex justify-content-center align-items-center"></i>
+                        </div>
+                        <div class="answer mt-3">
+                            <p class="mt-2">We ship across the country (India) and shipping is FREE to all locations.
+                                See the full
+                                shipping policy.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq">
+                        <div class="question  d-flex justify-content-between align-items-center">
+                            <span>Do you ship overseas?</span>
+                            <i class="fa-solid fa-angle-down d-flex justify-content-center align-items-center"></i>
+                        </div>
+                        <div class="answer mt-3">
+                            <p class="mt-2">As of now, We are delivering only in India.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq">
+                        <div class="question  d-flex justify-content-between align-items-center">
+                            <span>Can you help with my discount code?</span>
+                            <i class="fa-solid fa-angle-down d-flex justify-content-center align-items-center"></i>
+                        </div>
+                        <div class="answer mt-3">
+                            <p class="mt-2">Some codes are not compatible with the buy 2 get 1 free offer. If you have
+                                any trouble
+                                with a discount let us know and we will help.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq border-0">
+                        <div class="question  d-flex justify-content-between align-items-center">
+                            <span>Any question?</span>
+                            <i class="fa-solid fa-angle-down d-flex justify-content-center align-items-center"></i>
+                        </div>
+                        <div class="answer mt-3">
+                            <p class="mt-2">You can contact us through our contact page! We will be happy to assist you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- subscribe section -->
+    <section class="subscribe">
+        <div class="container text-center my-5 ">
+            <h1 class="text-black">Get The latest Updates!</h1>
+            <p class="mt-4">Subscribe to get update and offer details!</p>
+            <div
+                class="subscribe-input d-flex flex-sm-row flex-column justify-content-center align-items-center mt-sm-4">
+                <input type="text" placeholder="Enter Your Email" class="rounded-0 ">
+                <button class="subscribe_btn mt-sm-0 mt-3 bg-black text-white border-0">Subscribe</button>
+            </div>
+        </div>
+    </section>
+    <!-- end subscribe section -->
+
+    <!-- footer section -->
+    <footer class="bg-black p-md-5 py-5">
+        <div class="container">
+            <div class="row">
+                <div class="footer-logo col-lg-3 col-sm-6">
+                    <img src="assets/IMG/Comico_Logo-removebg-preview.png" alt="">
+                    <div class="social-links mt-4 d-flex align-items-center text-center ">
+                        <span><i class="fa-brands fa-instagram ms-0 bg-white text-black "></i></span>
+                        <span><i class="fa-brands fa-facebook-f bg-white text-black "></i></span>
+                        <span><i class="fa-brands fa-linkedin-in bg-white text-black "></i></span>
+                        <span><i class="fa-brands fa-github bg-white text-black "></i></span>
+                    </div>
+                </div>
+                <div class="links col-lg-3 col-sm-6 mt-sm-0 mt-5">
+                    <h2 class="text-white">Quick Links</h2>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Features</a></li>
+                    </ul>
+                </div>
+                <div class="links col-lg-3 col-sm-6 mt-lg-0 mt-5">
+                    <h2 class="text-white">Usefull Links</h2>
+                    <ul>
+                        <li><a href="comics.html">Comics</a></li>
+                        <li><a href="manga.html">Manga</a></li>
+                        <li><a href="posters.html">Posters</a></li>
+                        <li><a href="actionfigure.html">Action Figure</a></li>
+                    </ul>
+                </div>
+                <div class="links col-lg-3 col-sm-6 mt-lg-0 mt-5">
+                    <h2 class="text-white">Account</h2>
+                    <ul>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Request Products</a></li>
+                        <li><a href="#">Your Order</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright-section text-white text-center ">
+                <p class="copyright mb-0">&copy; 2024 COMIKO The Comic Book Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer section -->
+
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'
+        integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL'
+        crossorigin='anonymous'></script>
+    <script src="assets/JS/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // studio slider
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 2.5,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                },
+            },
+        });
+
+        // banner slider
+        // var swiper = new Swiper(".mySwiper", {
+        //     slidesPerView: 1,
+        //     spaceBetween: 30,
+        //     loop: true,
+        //     pagination: {
+        //         el: ".swiper-pagination",
+        //         clickable: true,
+        //     },
+        //     autoplay: {
+        //         delay: 2500,
+        //         disableOnInteraction: false,
+        //         pauseOnMouseEnter: true,
+        //     },
+        //     navigation: {
+        //         nextEl: ".swiper-button-next",
+        //         prevEl: ".swiper-button-prev",
+        //     },
+        // });
+    </script>
+
+</body>
+
+
+
+
+</html>

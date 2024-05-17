@@ -1,0 +1,367 @@
+/* --------------1400px----------------- */
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+  .hero .content {
+    padding: 50px 120px;
+  }
+
+  footer .social-links i {
+    margin: 0px 5px;
+  }
+
+  footer .footer-logo img {
+    width: 65%;
+    height: 20%;
+  }
+}
+
+/* --------------end 1400px----------------- */
+
+/* --------------992px----------------- */
+@media (max-width: 992px) {
+  .hero .content {
+    padding: 50px 30px;
+  }
+
+  .close-btn i {
+    top: 4%;
+    right: 4%;
+  }
+
+  .search-bar i {
+    right: 3%;
+  }
+
+  footer .footer-logo img {
+    width: 50%;
+    height: 18%;
+  }
+
+  .about-us .about-details {
+    width: 100%;
+  }
+}
+
+/* --------------end 992px----------------- */
+
+/* --------------768px----------------- */
+@media (max-width: 768px) {
+  .close-btn i {
+    top: 4%;
+    right: 5%;
+  }
+
+  .close-btn i {
+    top: 4%;
+    right: 6%;
+  }
+
+  .search-bar i {
+    right: 4%;
+  }
+
+  footer .footer-logo img {
+    width: 60%;
+    height: 18%;
+  }
+
+  .about-us h1,
+  .contact-us .contact-details h1,
+  .main-products h1 {
+    font-size: 4.5rem;
+  }
+
+  .comic-detail {
+    padding: 40px 0;
+  }
+
+  .thankyou .content span {
+    width: 100%;
+  }
+}
+
+/* --------------end 768px----------------- */
+
+/* --------------576px----------------- */
+@media (max-width: 576px) {
+  .close-btn {
+    right: 8%;
+  }
+
+  .comics .btn .explorebtn {
+    padding: 10px 15px;
+  }
+
+  .close-btn i {
+    top: 4%;
+    right: 7%;
+  }
+
+  footer .footer-logo img {
+    width: 35%;
+    height: 30%;
+  }
+
+  footer .social-links i {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .subscribe input {
+    display: inline-block;
+    width: 80%;
+  }
+
+  .subscribe .subscribe_btn {
+    padding: 8px 15px 8px 15px;
+    width: 150px;
+  }
+
+  .feature {
+    padding: 2rem 5rem;
+  }
+
+  footer {
+    padding: 50px 20px;
+  }
+
+  footer .links h2 {
+    font-size: 24px;
+  }
+
+  footer .links ul li a {
+    font-size: 16px;
+  }
+
+  .float {
+    width: 45px;
+    height: 45px;
+    padding: 25px;
+  }
+
+  #myBtn {
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+  }
+
+  .user-account h1 {
+    font-size: 2.8rem;
+  }
+
+  .wrapper {
+    width: 350px;
+  }
+
+  .user-form {
+    min-width: 350px;
+  }
+
+  .user-account .form-links a {
+    font-size: 1.2rem;
+  }
+
+  .checkout .input-group input {
+    width: 100%;
+  }
+}
+
+/* --------------end 576px----------------- */
+
+/* --------------425px----------------- */
+@media (max-width: 425px) {
+  .navbar {
+    padding: 20px 0;
+  }
+
+  .navbar img {
+    width: 125px;
+    height: 25px;
+  }
+
+  .close-btn i {
+    top: 4%;
+    right: 5%;
+  }
+
+  .another_list {
+    display: initial;
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .another_list li {
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  .fa-user {
+    display: none;
+  }
+
+  .icon .fa-bag-shopping {
+    margin: 0 20px 0 0;
+  }
+
+  .comics {
+    padding: 40px 15px;
+  }
+
+  .comics .card-body {
+    padding: 15px 10px 40px 10px;
+  }
+
+  .comics .card-body h5 {
+    font-size: 18px;
+  }
+
+  .search-bar i {
+    right: 5%;
+  }
+
+  .whyus .corner-bottom {
+    width: 100px;
+    height: 100px;
+  }
+
+  .whyus .corner-top {
+    width: 100px;
+    height: 100px;
+  }
+
+  footer .footer-logo img {
+    width: 45%;
+    height: 30%;
+  }
+
+  .subscribe h1 {
+    font-size: 36px;
+  }
+
+  .faq-section .row {
+    padding: 40px 20px;
+  }
+
+  .about-us h1,
+  .contact-us .contact-details h1,
+  .main-products h1 {
+    font-size: 3rem;
+  }
+
+  .contact-details .contact-form {
+    padding: 45px 20px;
+  }
+  .contact-details .contact-form .form-control {
+    padding: 20px 10px;
+  }
+
+  .thankyou .content h1 {
+    font-size: 4.5rem;
+  }
+
+  .thankyou .content span {
+    font-size: 0.9rem;
+  }
+}
+
+/* --------------end 425px----------------- */
+
+/* --------------375px----------------- */
+@media (max-width: 375px) {
+  .sidebar {
+    width: 100%;
+    right: -400px;
+    z-index: 10;
+  }
+
+  #myBtn {
+    z-index: 1;
+  }
+
+  .float {
+    z-index: 1;
+  }
+
+  .search-bar i {
+    right: 5%;
+    top: 45px;
+  }
+
+  .hero .content {
+    padding: 50px 0px;
+  }
+
+  .comics .btn .explorebtn {
+    padding: 8px 15px;
+  }
+
+  footer .footer-logo img {
+    width: 55%;
+    height: 30%;
+  }
+
+  .subscribe h1 {
+    font-size: 30px;
+  }
+
+  .subscribe p {
+    font-size: 16px;
+  }
+
+  .subscribe input {
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 90%;
+    border: 2px solid;
+    border-radius: 0;
+  }
+
+  .subscribe .subscribe_btn {
+    font-size: 18px;
+  }
+
+  .feature {
+    padding: 1rem 0;
+  }
+
+  .hero .container {
+    padding: 40px 15px;
+  }
+
+  .user-account h1 {
+    font-size: 2.4rem;
+  }
+
+  .wrapper {
+    width: 300px;
+  }
+
+  .user-form {
+    min-width: 300px;
+  }
+
+  .thankyou .content button {
+    font-size: 1rem;
+    padding: 8px 25px;
+  }
+}
+
+/* --------------end 375px----------------- */
+
+/* --------------320px----------------- */
+@media (max-width: 320px) {
+  .wrapper {
+    width: 270px;
+  }
+
+  .user-form {
+    min-width: 270px;
+  }
+}
+
+/* --------------end 320px----------------- */

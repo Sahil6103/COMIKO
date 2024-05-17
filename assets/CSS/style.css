@@ -1,0 +1,1138 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "gotham";
+  src: url(../../assets/fonts/gotham/Gotham-Black.otf);
+}
+
+@font-face {
+  font-family: gotham-thin;
+  src: url(../../assets/fonts/gotham/Gotham-Thin.otf);
+}
+
+@font-face {
+  font-family: gotham-medium;
+  src: url(../../assets/fonts/gotham/GothamMedium_1.ttf);
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProText-Light.ttf");
+}
+
+@font-face {
+  font-family: lemon jelly;
+  src: url(../fonts/lemon-jelly/Lemon\ Jelly\ Personal\ Use.ttf);
+}
+
+@font-face {
+  font-family: hamster;
+  src: url(../fonts/Hamster.otf);
+}
+
+/* custom properties */
+:root {
+  --black: #000000;
+  --light-silver: #5b5b5bc7;
+  --silver: #d5d3d3fe;
+  --white: #ffffff;
+  --hero: "gotham-medium";
+  --main: "Raleway", sans-serif;
+  --comic-font: "SF Pro Text";
+  --lemonjelly: "lemon jelly";
+  --hamster: "hamster";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main);
+  background-color: var(--white);
+  scroll-behavior: smooth;
+}
+
+/* --------------scrollbar----------------- */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--white);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* --------------end scrollbar-----------------*/
+
+/* --------------floating button----------------- */
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#myBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 10;
+  font-size: 18px;
+  border: none;
+  background-color: var(--black);
+  color: var(--white);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  transform: scale(0);
+  transition: all 0.3s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#myBtn:hover {
+  background-color: #434242;
+}
+
+.float {
+  position: fixed;
+  padding: 15px;
+  width: 55px;
+  height: 55px;
+  bottom: 20px;
+  left: 30px;
+  background-color: #25d366;
+  color: var(--white);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  z-index: 100;
+}
+
+/* --------------end floating buttons----------------- */
+
+/* ------------------ navbar ------------------- */
+
+.navbar {
+  background-color: var(--black);
+}
+
+.navbar img {
+  width: 150px;
+  height: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sidebar {
+  top: 0;
+  right: -300px;
+  height: 100vh;
+  width: 300px;
+  background-color: var(--black);
+  padding: 80px 30px 0 30px;
+  transition: right 0.3s ease;
+  z-index: 10;
+}
+
+.sidebar ul li {
+  list-style: none;
+}
+
+.sidebar ul li a {
+  color: var(--white);
+
+  &:hover {
+    color: rgb(194, 194, 194);
+  }
+
+  &:active {
+    color: rgb(194, 194, 194);
+  }
+}
+
+.sidebar.open {
+  right: 0;
+  top: 0;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  background: var(--black);
+}
+
+.close-btn i {
+  position: fixed;
+  top: 4%;
+  right: 2.5%;
+  font-size: 1.5rem;
+}
+
+.icon_div .icon i {
+  padding: 6px;
+  font-size: 22px;
+}
+
+.another_list {
+  display: none;
+}
+
+/* ------------------ end navbar ------------------- */
+
+/*------------------ hero section -------------------*/
+
+.hero {
+  height: 90vh;
+  overflow: hidden;
+}
+
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    -60deg,
+    rgb(136, 138, 136) 50%,
+    rgb(213, 213, 213) 50%
+  );
+  bottom: 0%;
+  left: -50%;
+  opacity: 0.5;
+  position: absolute;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+.hero .content {
+  padding: 50px 200px;
+}
+
+.hero h1 {
+  font-family: "gotham-medium";
+  font-weight: 600;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.797);
+}
+
+.search-bar .search-field {
+  padding: 15px 20px;
+  margin: 30px 0 0 0;
+  font-size: clamp(16px, 4vw, 18px);
+  font-weight: 600;
+  color: #7d7d7d;
+}
+
+.search-bar .search-field:focus {
+  outline: none;
+}
+
+.search-bar i {
+  top: 48px;
+  right: 2%;
+  font-size: 1.2rem;
+  color: var(--black);
+  background-color: transparent;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+/* ------------------ end hero section ------------------- */
+
+/* ----------------- banner slider ------------------------ */
+/* .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  color: white;
+  font-weight: 700;
+  opacity: 10;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 14px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgb(132, 132, 132) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgba(255, 255, 255, 0.804) !important;
+} */
+.carousel-control-prev-icon {
+  position: absolute;
+  left: 15px;
+}
+
+.carousel-control-next-icon {
+  position: absolute;
+  right: 15px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+/* ----------------- end banner slider ------------------------ */
+
+/* ----------------- studio section----------------------- */
+.swiper {
+  width: 90%;
+  height: 100%;
+  margin: 30px 0;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: var(--white);
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ----------------- end studio section----------------------- */
+
+/* ------------------ main-prodcut section ------------------- */
+
+.home-product {
+  margin: 50px 0;
+}
+
+.main-products h2 {
+  /* font-size: 3rem; */
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.main-products .card {
+  background-color: transparent;
+  font-family: var(--main);
+  height: 100%;
+}
+
+.main-products .card img {
+  transition: all 0.3s;
+  aspect-ratio: 2/3;
+}
+
+.main-products .card2 img {
+  aspect-ratio: 3/3;
+}
+
+.main-products .card-body {
+  background-color: transparent;
+  z-index: 0;
+  width: 100%;
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.main-products .card-body h5 {
+  font-family: var(--main);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main-products .card-body p {
+  font-family: var(--main);
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.main-products .card-body span {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "SF Pro Text";
+}
+
+.main-products .card:hover img {
+  filter: brightness(60%);
+  transition: all 0.3;
+  height: 100%;
+}
+
+.main-products .card:hover .card-body {
+  background-color: var(--black);
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.main-products .btn-div .explorebtn {
+  padding: 10px 30px;
+  border: 2px solid var(--black);
+  background-color: transparent;
+  color: var(--black);
+  font-weight: 600;
+  font-size: 18px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.main-products .btn-div .explorebtn::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  clip-path: circle(0% at 0 50%);
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.main-products .btn-div .explorebtn:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.main-products .btn-div .explorebtn:hover::before {
+  clip-path: circle(141.2% at 0 0);
+}
+
+/* ------------------ end main product ------------------- */
+
+/* ------------------ feature section -------------------*/
+.feature {
+  margin: 50px 0 50px 0;
+}
+
+.feature .card {
+  border: none;
+  background: transparent;
+}
+
+.feature .card i {
+  color: var(--black);
+  font-size: 24px;
+}
+
+.feature .card-body h5 {
+  color: var(--black);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.feature .card-body p {
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* ------------------ end feature section ------------------- */
+
+/* ------------------ why us section ------------------- */
+
+.whyus .content h1 {
+  font-family: gotham-medium;
+  font-weight: 600;
+}
+
+.whyus .content p {
+  font-family: var(--main);
+  font-weight: 700;
+  line-height: 27px;
+  margin: 25px 0 0 0;
+}
+
+.whyus img {
+  width: 100%;
+  height: 100%;
+}
+
+.whyus .corner-bottom {
+  width: 200px;
+  height: 200px;
+  border-left: 5px solid var(--black);
+  border-bottom: 5px solid var(--black);
+
+  z-index: -1;
+  bottom: -20px;
+  left: -20px;
+}
+
+.whyus .corner-top {
+  top: -20px;
+  right: -20px;
+  width: 200px;
+  height: 200px;
+  border-top: 5px solid var(--black);
+  border-right: 5px solid var(--black);
+}
+/* ------------------ end why us section ------------------- */
+
+/* ---------------FAQ section ----------------- */
+.faq-section {
+  margin: 60px 0;
+}
+
+.faq-ques {
+  background-color: rgba(210, 210, 210, 0.166);
+  padding: 20px 30px;
+}
+
+.faq-section .faq-heading h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.faq-section .faq-heading p {
+  font-size: 1.1rem;
+}
+
+.faq-section .faq-heading span {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.faq {
+  max-width: 700px;
+  border-bottom: 1px solid rgb(64, 64, 64);
+  margin: 20px 0 10px 0;
+}
+
+.faq .question {
+  cursor: pointer;
+}
+
+.faq .question span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.faq .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.faq.active .answer {
+  max-height: 300px;
+  transition: all 0.5s;
+  animation: fade 0.6s ease;
+}
+
+.faq.active i {
+  transform: rotate(180deg);
+}
+
+.faq .question i {
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  width: 24px;
+  height: 24px;
+  transition: all 0.5s;
+}
+
+.question:hover i {
+  background-color: white;
+  color: black;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* --------------- end FAQ section ---------------- */
+
+/*------------------ end subscribe section ------------------- */
+.subscribe h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.subscribe p {
+  font-size: 20px;
+  color: var(--bg-secondary);
+  font-weight: 600;
+}
+
+.subscribe-input input {
+  padding: 10px 20px;
+  font-size: 20px;
+  width: 50%;
+  border: 2px solid;
+}
+
+.subscribe .subscribe_btn {
+  padding: 11.5px 15px 12px 15px;
+  font-size: 20px;
+  width: 180px;
+  font-weight: 700;
+}
+
+/* ------------------ end subscribe section -------------------*/
+
+/* ------------------ footer section ------------------- */
+
+footer .footer-logo img {
+  margin: 5px 0 0 0;
+  width: 50%;
+  height: 18%;
+}
+
+footer .social-links i {
+  margin: 0px 6px;
+  padding: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  transition: all 0.3s;
+}
+
+footer .social-links i:hover {
+  background-color: rgb(144, 142, 142);
+}
+
+footer .links ul {
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+footer .links ul li {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+footer .links h2 {
+  font-weight: 600;
+}
+
+footer .links ul li a {
+  color: var(--white);
+  font-family: var(--main);
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+footer .links ul li a:hover {
+  margin: 0 0 0 10px;
+  color: rgb(144, 142, 142);
+}
+
+footer .copyright-section {
+  margin: 70px 0 0 0;
+}
+
+/* ------------------ end footer section ------------------- */
+
+/* ------------------ user form page ------------------- */
+.user-account {
+  background: url(../IMG/userform.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 0;
+}
+
+.wrapper {
+  width: 400px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.main-form {
+  gap: 20px;
+  transition: all 0.5s;
+}
+
+.user-account h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.user-account .form-links a {
+  color: var(--light-silver);
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  margin: 40px 0 0 0;
+}
+
+.user-account .form-links a:hover {
+  color: var(--black);
+}
+
+.user-account .form-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--black);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
+.user-account .form-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  width: 100%;
+  left: 0;
+  transition: transform 0.3s;
+}
+
+.user-account .form-links a:active::after {
+  color: red;
+}
+
+.user-form {
+  min-width: 400px;
+  margin: 50px 0;
+  transition: all 0.3s;
+}
+
+.user-form input {
+  font-weight: 600;
+  border: none;
+  border-bottom: 2px solid rgba(151, 149, 149, 0.747);
+  border-radius: 0;
+  padding: 10px 0;
+  transition: all 0.3s;
+  background: transparent;
+}
+
+.user-form input:hover {
+  border-color: var(--black);
+}
+
+.user-form input:focus {
+  box-shadow: none;
+  border-color: var(--black);
+}
+
+.user-form .show_icon,
+.show_icon_confirm {
+  top: -35px;
+  right: 10px;
+  color: #777b7e;
+  cursor: pointer;
+}
+
+.user-form .btn {
+  width: 100%;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.user-form .btn:hover {
+  color: var(--white);
+}
+
+.user-form .password-link {
+  margin: 40px 0 0 0;
+}
+
+.user-form .password-link a {
+  font-weight: 600;
+}
+
+.login-with p {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.login-links i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2em;
+}
+
+/* ------------------ end user form page ------------------- */
+
+/* ------------------ some same properties ---------------------- */
+
+.about-us,
+.contact-us,
+.main-products {
+  margin: 100px 0;
+}
+
+.about-us h1,
+.contact-us .contact-details h1,
+.main-products h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 26, 26, 0.426),
+    rgba(26, 26, 26, 0) 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+/* ----------------- same properties end here ------------------ */
+
+/* ------------------- about us page ------------------------ */
+
+.about-us .about-details {
+  width: 60%;
+  margin: 0 auto;
+  font-weight: 600;
+  text-align: justify;
+}
+
+/* ------------------- end about us page ------------------------ */
+
+/* -------------------- contact us page ----------------------- */
+
+.contact-us .contact-details {
+  margin: 0 auto;
+}
+
+.contact-details .summary p {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.contact-details .contact-left {
+  padding: 0 40px;
+}
+
+.contact-details .contact-form {
+  background-color: rgba(195, 195, 195, 0.23);
+  padding: 45px 40px;
+}
+
+.contact-details .contact-time span,
+.contact-details .contact-info span {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.contact-details .contact-time p,
+.contact-details .contact-info p {
+  font-weight: 500;
+}
+
+.contact-details .contact-form .form-control {
+  height: 60px;
+  border: 2px solid rgba(100, 100, 100, 0.226);
+  border-radius: 0;
+  background-color: transparent;
+  padding: 20px;
+  transition: all 0.3s;
+}
+
+.contact-details .contact-form .form-control:hover {
+  border-color: black;
+}
+.contact-details .contact-form .form-control:focus {
+  box-shadow: none;
+}
+
+.contact-details .contact-form .message {
+  height: 150px;
+}
+
+.contact-details .contact-form .btn {
+  background-color: rgb(0, 0, 0);
+  padding: 10px 40px;
+  font-weight: 600;
+}
+
+.contact-details .contact-form .btn:hover {
+  color: white;
+}
+/* --------------------- end contact us page ------------------------ */
+
+/* --------------------- main product page ------------------------ */
+
+/* --------------------- end main product page ------------------------ */
+
+/* ---------------------- product detail page ------------------------ */
+.product-detail {
+  padding: 80px 0 80px 0;
+}
+
+.product-detail .product-img-card {
+  width: 80%;
+  height: 80%;
+  margin: 20px 20px 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.662) 5px 8px 20px;
+  transition: all 0.8s;
+}
+
+.product-detail img {
+  width: 100%;
+  height: 100%;
+}
+
+.product-img-body {
+  /* padding: 0 0 0 80px; */
+  transition: all 0.8s;
+}
+
+.product-img-body .price {
+  font-size: 1.8rem;
+  margin: 100px 0;
+}
+
+.product-img-body h1 {
+  font-size: 2.1rem;
+}
+
+.product-img-body input {
+  width: 70px;
+  border-radius: 0;
+  border: 2px solid var(--black);
+  padding: 0 0 0 8px;
+}
+
+.product-img-body button {
+  background-color: var(--black);
+  padding: 15px 30px;
+  width: 280px;
+  color: var(--white);
+  border: none;
+  font-size: 18px;
+}
+
+/* ---------------------- end product detail page ------------------------ */
+
+/* ---------------------- checkout-form page ------------------------ */
+
+.checkout .main-form {
+  margin: 70px 0;
+}
+
+.checkout .main-form input,
+.checkout .main-form select {
+  padding: 18px 15px;
+  border: 2px solid var(--silver);
+  border-radius: 0;
+}
+
+.checkout .main-form input:hover,
+.checkout .main-form select:hover {
+  border-color: black;
+}
+
+.checkout .main-form input:focus,
+.checkout .main-form select:focus {
+  box-shadow: none;
+}
+
+.checkout .main-form button {
+  width: 100%;
+  padding: 15px 0;
+  border: 1px solid black;
+  background-color: transparent;
+  transition: all 0.5s;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  position: relative;
+}
+
+.checkout .main-form button::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  clip-path: circle(0% at 50% 50%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.checkout .main-form button:hover {
+  color: white;
+  transition: all 0.3s;
+}
+
+.checkout .main-form button:hover::before {
+  clip-path: circle(70.7% at 50% 50%);
+}
+
+.order {
+  border: 1px solid;
+  margin: 70px 0;
+  padding: 30px 30px;
+  background-color: rgba(191, 191, 192, 0.115);
+  border: 2px solid rgba(205, 207, 208, 0.366);
+}
+
+.order .price {
+  font-family: "SF Pro Text";
+}
+
+.order .title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.order .product {
+  margin: 20px 0 0 0;
+  font-weight: 500;
+}
+
+.order .product .name {
+  width: 65%;
+}
+
+.order .subtotal {
+  margin: 20px 0;
+}
+
+.order .total {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+/* ---------------------- end checkout-form page ------------------------ */
+
+/* ---------------------- thank you page ----------------------- */
+.thankyou {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.thankyou::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("../IMG/banner_2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(30%);
+  z-index: -1;
+}
+
+.thankyou .content {
+  color: var(--white);
+  gap: 30px;
+}
+
+.thankyou .content h1 {
+  font-family: var(--lemonjelly);
+  font-size: 6rem;
+  letter-spacing: 2px;
+}
+
+.thankyou .content span {
+  width: 70%;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.thankyou .content button {
+  padding: 8px 30px;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  font-size: 1.1rem;
+  color: var(--white);
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.thankyou .content button:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+/* ---------------------- end thank you page ----------------------- */
