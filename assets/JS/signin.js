@@ -102,3 +102,17 @@ signup_btn.addEventListener("click", (e) => {
 //     signup_password.type = "password";
 //   }
 // });
+
+// * Active Links
+
+// ? already declared on top of js its just for reference only
+// let login_link = document.querySelector("#login");
+// let register_link = document.querySelector("#register");
+
+login_link.addEventListener("click", () => {
+  login_link.classList.toggle("active");
+});
+
+register_link.addEventListener("click", () => {
+  register_link.classList.toggle("active");
+});

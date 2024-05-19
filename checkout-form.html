@@ -10,9 +10,6 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'
         integrity='sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=='
         crossorigin='anonymous' referrerpolicy='no-referrer' />
-    <link
-        href='https: //cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.1-web/css/all.min.css'
-        rel='stylesheet'>
     <link rel="stylesheet" href="assets/CSS/style.css">
     <link rel="stylesheet" href="assets/CSS/responsive.css">
     <link rel="shortcut icon" href="assets/IMG/favicon3.png" type="image/x-icon">
@@ -108,7 +105,7 @@
                         </div>
                         <div class="input-group mb-3 d-flex justify-content-between align-items-center gap-3 ">
                             <input type="text" class="form-control" placeholder="City" id="city">
-                            <select class="form-select" id="state">
+                            <select class="form-select" id="state" placeholder="State">
                                 <option selected value="">State</option>
                                 <option value="Gujarat">Gujarat</option>
                                 <option value="Maharashtra">Maharashtra</option>
@@ -117,14 +114,17 @@
                             <input type="text" class="form-control " placeholder="PIN Code" id="pin_code">
                         </div>
                         <div class="mt-5">
-                            <button id="checkoutbtn">Place Order</button>
+                            <!-- <button id="checkoutbtn">PLACE ORDER</button> -->
+                            <div class="placebtn" id="checkbtn">
+                                <a href="thankyou.html">PLACE ORDER</a>
+                            </div>
                         </div>
                         <!-- </form> -->
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-5 col-12 ">
                     <h1 class="text-center fw-bold ">Your Order</h1>
-                    <div class="order ">
+                    <div class="order">
                         <span class="title">Product</span>
                         <div class="product d-flex justify-content-between align-items-center ">
                             <p class="name m-0">Spider-Verse : Spider-Geddon Omnibus</p>

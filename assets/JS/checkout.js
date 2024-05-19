@@ -7,7 +7,7 @@ let address = document.querySelector("#address");
 let city = document.querySelector("#city");
 let state = document.querySelector("#state");
 let pincode = document.querySelector("#pin_code");
-let checkoutbtn = document.querySelector("#checkoutbtn");
+let checkoutbtn = document.querySelector("#checkbtn");
 let checkout_error = document.querySelector("#checkout_error");
 
 checkoutbtn.addEventListener("click", (e) => {
@@ -63,5 +63,7 @@ checkoutbtn.addEventListener("click", (e) => {
     checkout_error.innerHTML =
       "<div class='alert alert-danger rounded-0' role='alert'> <i class='fa-solid fa-circle-exclamation'></i>&nbsp;&nbsp;Enter Pincode No.</div>";
     pincode.focus();
+  } else {
+    location.href = "thankyou.html";
   }
 });

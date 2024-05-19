@@ -167,6 +167,16 @@
   .checkout .input-group input {
     width: 100%;
   }
+
+  .product-detail {
+    padding: 40px 0 40px 0;
+  }
+
+  .about-us h1,
+  .contact-us .contact-details h1,
+  .main-products h1 {
+    font-size: 4rem;
+  }
 }
 
 /* --------------end 576px----------------- */
@@ -190,7 +200,7 @@
   .another_list {
     display: initial;
     padding: 0;
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
 
   .another_list li {
@@ -266,6 +276,16 @@
 
   .thankyou .content span {
     font-size: 0.9rem;
+  }
+
+  .product-detail {
+    padding: 30px 0 30px 0;
+  }
+
+  .about-us,
+  .contact-us,
+  .main-products {
+    margin: 50px 0;
   }
 }
 
@@ -348,6 +368,12 @@
   .thankyou .content button {
     font-size: 1rem;
     padding: 8px 25px;
+  }
+
+  .about-us h1,
+  .contact-us .contact-details h1,
+  .main-products h1 {
+    font-size: 2.5rem;
   }
 }
 
