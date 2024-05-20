@@ -108,11 +108,27 @@ signup_btn.addEventListener("click", (e) => {
 // ? already declared on top of js its just for reference only
 // let login_link = document.querySelector("#login");
 // let register_link = document.querySelector("#register");
+// let form_links = document.querySelectorAll(".form_links a");
+// console.log(form_links);
 
-login_link.addEventListener("click", () => {
-  login_link.classList.toggle("active");
-});
+// login_link.addEventListener("click", () => {
+//   login_link.classList.toggle("active");
+// });
 
-register_link.addEventListener("click", () => {
-  register_link.classList.toggle("active");
+// register_link.addEventListener("click", () => {
+//   register_link.classList.toggle("active");
+// });
+
+const links = document.querySelectorAll(".form-links a");
+
+links.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default action of the links
+
+    // Remove 'active' class from all links
+    links.forEach((link) => link.classList.remove("active"));
+
+    // Add 'active' class to the clicked link
+    this.classList.add("active");
+  });
 });

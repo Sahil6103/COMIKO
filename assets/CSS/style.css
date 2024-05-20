@@ -765,7 +765,16 @@ footer .copyright-section {
 }
 
 .user-account .form-links a.active {
-  color: red;
+  color: black;
+}
+
+.user-account .form-links a.active::after {
+  color: black;
+  transform: scaleX(1);
+  transform-origin: left;
+  width: 100%;
+  left: 0;
+  transition: transform 0.3s;
 }
 
 .user-form {
