@@ -15,6 +15,10 @@
     width: 65%;
     height: 20%;
   }
+
+  .main-cart .product-img {
+    width: 15%;
+  }
 }
 
 /* --------------end 1400px----------------- */
@@ -40,6 +44,10 @@
   }
 
   .about-us .about-details {
+    width: 100%;
+  }
+
+  .cart-total {
     width: 100%;
   }
 }
@@ -69,7 +77,8 @@
 
   .about-us h1,
   .contact-us .contact-details h1,
-  .main-products h1 {
+  .main-products h1,
+  .cart h1 {
     font-size: 4.5rem;
   }
 
@@ -79,6 +88,10 @@
 
   .thankyou .content span {
     width: 100%;
+  }
+
+  .main-cart .product-img {
+    width: 30%;
   }
 }
 
@@ -174,8 +187,13 @@
 
   .about-us h1,
   .contact-us .contact-details h1,
-  .main-products h1 {
+  .main-products h1,
+  .cart h1 {
     font-size: 4rem;
+  }
+
+  .main-cart .product-img {
+    width: 30%;
   }
 }
 
@@ -259,7 +277,8 @@
 
   .about-us h1,
   .contact-us .contact-details h1,
-  .main-products h1 {
+  .main-products h1,
+  .cart h1 {
     font-size: 3rem;
   }
 
@@ -286,6 +305,14 @@
   .contact-us,
   .main-products {
     margin: 50px 0;
+  }
+
+  .main-cart .product-img {
+    width: 25%;
+  }
+
+  .cart-total {
+    padding: 40px 20px;
   }
 }
 
@@ -372,8 +399,13 @@
 
   .about-us h1,
   .contact-us .contact-details h1,
-  .main-products h1 {
+  .main-products h1,
+  .cart h1 {
     font-size: 2.5rem;
+  }
+
+  .main-cart .product-img {
+    width: 35%;
   }
 }
 

@@ -847,13 +847,15 @@ footer .copyright-section {
 
 .about-us,
 .contact-us,
-.main-products {
+.main-products,
+.cart {
   margin: 100px 0;
 }
 
 .about-us h1,
 .contact-us .contact-details h1,
-.main-products h1 {
+.main-products h1,
+.cart h1 {
   font-size: 5rem;
   font-weight: 700;
   background: linear-gradient(
@@ -1166,3 +1168,83 @@ footer .copyright-section {
   color: var(--black);
 }
 /* ---------------------- end thank you page ----------------------- */
+
+/* ---------------------- cart page ----------------------------- */
+
+.main-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-cart .product-img {
+  width: 15%;
+}
+
+.main-cart .product-img img {
+  width: 100%;
+}
+
+.cart img {
+  max-width: 100px;
+}
+
+.main-cart input {
+  width: 20%;
+  height: 15%;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* padding: 10px; */
+}
+
+.main-cart a {
+  text-decoration: underline;
+  color: var(--light-silver);
+}
+
+.cart-total {
+  width: 50%;
+  height: fit-content;
+  padding: 40px;
+  border: 1px solid;
+}
+
+.cart-total .subtotal {
+  font-size: 1rem;
+}
+
+.price {
+  font-family: "SF Pro Text";
+}
+
+.cart-total .main-total {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cart textarea {
+  border: 1px solid;
+  border-radius: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.cart .placebtn a {
+  text-decoration: none;
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------------------- end cart page ----------------------------- */
